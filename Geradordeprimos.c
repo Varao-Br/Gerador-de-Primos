@@ -7,33 +7,33 @@ int requestQuantity(void);
 int main ()
 {
     setlocale(LC_ALL, "Portuguese");
-    int quantity, ultipri = 1, x = 1, prcont = 0;
+    int quantity, lastPrime = 1, aux = 1, count = 0;
     quantity = requestQuantity();
-    int primo[quantity];
-    primo[0] = 2;
-    primo[1] = 3;
-    printf("%d\n", primo[0]);
-    printf("%d\n", primo[1]);
-    while(ultipri != quantity - 1)
+    int prime[quantity];
+    prime[0] = 2;
+    prime[1] = 3;
+    printf("%d\n", prime[0]);
+    printf("%d\n", prime[1]);
+    while(lastPrime != quantity - 1)
     {
-        if (((primo[ultipri] + x) % primo[prcont]) == 0)
+        if (((prime[lastPrime] + aux) % prime[count]) == 0)
         {
-            prcont = 0;
-            x++;
+            count = 0;
+            aux++;
         }
         else
         {
-            if(prcont < ultipri)
+            if(count < lastPrime)
             {
-                prcont++;
+                count++;
             }
             else
             {
-                primo[ultipri + 1] = primo[ultipri] + x;
-                ultipri++;
-                printf("%d\n", primo[ultipri]);
-                x = 1;
-                prcont = 0;
+                prime[lastPrime + 1] = prime[lastPrime] + aux;
+                lastPrime++;
+                printf("%d\n", prime[lastPrime]);
+                aux = 1;
+                count = 0;
             }
         }
     }
@@ -42,7 +42,7 @@ int main ()
 
 int requestQuantity(void){
     int n;
-    printf("Quantos números primos você quer que sejam exibidos: ");
+    printf("Quantos números primes você quer que sejam eauxibidos: ");
     scanf("%d", &n);
     return n;
 }
