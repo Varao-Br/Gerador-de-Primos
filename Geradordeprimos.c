@@ -7,13 +7,11 @@ int requestQuantity(void);
 int main ()
 {
     setlocale(LC_ALL, "Portuguese");
-    int quantity, lastPrime = 1, aux = 1, count = 0;
+    int quantity, lastPrime = 0, aux = 1, count = 0;
     quantity = requestQuantity();
     int prime[quantity];
     prime[0] = 2;
-    prime[1] = 3;
     printf("%d\n", prime[0]);
-    printf("%d\n", prime[1]);
     while(lastPrime != quantity - 1)
     {
         if (((prime[lastPrime] + aux) % prime[count]) == 0)
