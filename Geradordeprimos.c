@@ -32,7 +32,6 @@ int main ()
                 printf("%d\n", primo[ultipri]);
                 x = 1;
                 prcont = 0;
-
             }
         }
     }
