@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <locale.h>
 
+#define FIRST_PRIME 2
+
 int requestQuantity(void);
 
 int main ()
@@ -10,7 +12,7 @@ int main ()
     int quantity, lastPrime = 0, aux = 1, count = 0;
     quantity = requestQuantity();
     int prime[quantity];
-    prime[0] = 2;
+    prime[0] = FIRST_PRIME;
     printf("%d\n", prime[0]);
     while(lastPrime != quantity - 1)
     {
