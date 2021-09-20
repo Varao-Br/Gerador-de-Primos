@@ -21,20 +21,15 @@ int main ()
             count = 0;
             aux++;
         }
+        else if(count < lastPrime)
+            count++;
         else
         {
-            if(count < lastPrime)
-            {
-                count++;
-            }
-            else
-            {
-                prime[lastPrime + 1] = prime[lastPrime] + aux;
-                lastPrime++;
-                printf("%d\n", prime[lastPrime]);
-                aux = 1;
-                count = 0;
-            }
+            prime[lastPrime + 1] = prime[lastPrime] + aux;
+            lastPrime++;
+            printf("%d\n", prime[lastPrime]);
+            aux = 1;
+            count = 0;
         }
     }
     return 0;
