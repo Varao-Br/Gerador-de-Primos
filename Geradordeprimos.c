@@ -42,7 +42,7 @@ int main ()
 
 int requestQuantity(void){
     int n;
-    printf("Quantos números primes você quer que sejam eauxibidos: ");
+    printf("Quantos números primos você quer que sejam exibidos: ");
     scanf("%d", &n);
     return n;
 }
